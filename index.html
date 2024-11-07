@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>PulsePath - Health and Fitness Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #a8e063, #56ab2f);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-green-500 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-first-aid text-3xl text-yellow-300"></i>
+                <h1 class="text-3xl font-bold tracking-wide" style="font-family: 'Roboto', sans-serif;">
+                    <span class="text-yellow-300">Pulse</span><span class="text-white">Path</span>
+                </h1>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a class="hover:underline" href="#">Home</a>
+                <a class="hover:underline" href="#">Features</a>
+                <a class="hover:underline" href="#">Topics</a>
+                <a class="hover:underline" href="#">Contact</a>
+                <a class="bg-white text-green-500 px-4 py-2 rounded-full font-bold hover:bg-gray-200" href="#">Login</a>
+                <a class="bg-white text-green-500 px-4 py-2 rounded-full font-bold hover:bg-gray-200" href="#">Register</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="flex flex-col space-y-2 mt-4">
+                <a class="hover:underline" href="#">Home</a>
+                <a class="hover:underline" href="#">Features</a>
+                <a class="hover:underline" href="#">Topics</a>
+                <a class="hover:underline" href="#">Contact</a>
+                <a class="bg-white text-green-500 px-4 py-2 rounded-full font-bold hover:bg-gray-200" href="#">Login</a>
+                <a class="bg-white text-green-500 px-4 py-2 rounded-full font-bold hover:bg-gray-200" href="#">Register</a>
+            </nav>
+        </div>
+    </header>
+  <main class="container mx-auto mt-8 p-4">
+   <section class="bg-gradient-to-r from-green-400 to-blue-400 p-6 rounded-lg shadow-md mb-8 text-center">
+    <h2 class="text-2xl font-bold mb-4 text-white">
+     Chat with Our Health &amp; Fitness Bot
+    </h2>
+    <p class="text-white mb-4 text-lg leading-relaxed">
+     Click the button below to chat with our health and fitness bot. Get instant answers to your health-related questions and receive personalized advice to help you overcome your issues and achieve your wellness goals.
+    </p>
+    <button class="bg-white text-green-500 px-6 py-3 rounded-full font-bold hover:bg-gray-200">
+     Chat Now
+    </button>
+   </section>
+   <section class="bg-gradient-to-r from-green-400 to-blue-400 p-6 rounded-lg shadow-md mb-8">
+    <h2 class="text-xl font-bold mb-4 text-white">
+     Core Features
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person checking symptoms on a digital device" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/jXG8rNec8YR8EKV8IA951SvOT8e9BiTsXdOJxaPOxUcoziuTA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Symptom Checker
+      </h3>
+      <p>
+       Users can describe symptoms, and the chatbot provides general advice, suggests lifestyle changes, or recommends seeing a doctor.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person receiving daily health tips on a mobile device" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/4qyYbcYSdDolFN9yFcDIqLoTHx6MFC2T4YWg9ci8qLZ7so7E.jpg"/>
+      <h3 class="font-bold mb-2">
+       Daily Health Tips
+      </h3>
+      <p>
+       Push short health tips, such as staying hydrated, practicing mindfulness, and recommended exercises.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person following a personalized exercise plan" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/oj8LZa9KfJT1O6nxIgxgRKnALfUtTromTauv4a43l5PsziuTA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Personalized Exercise Plans
+      </h3>
+      <p>
+       Based on user inputs like age, weight, health goals, and any injuries or conditions.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person receiving diet and nutrition advice" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/vA1QDGeONHXaXaUTjCqerfrnx1sWIdnxRMfCzJ5DPGbkOL6OB.jpg"/>
+      <h3 class="font-bold mb-2">
+       Diet and Nutrition Advice
+      </h3>
+      <p>
+       Offer dietary suggestions, meal plans, and recipes based on users’ dietary preferences, goals, and restrictions.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person practicing mental wellness exercises" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/HtXI0WNLdx6tAxkccw9mDhTeWtgqNCMAG5PiM0YLuGAyZR3JA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Mental Wellness Support
+      </h3>
+      <p>
+       Include exercises for mental health, such as breathing techniques, meditation guides, or self-care reminders.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person tracking their daily routine" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/WxCPric1k96iMxLhXYwN8biz370NvmydH8BVkHfXVD2yZR3JA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Routine Tracker
+      </h3>
+      <p>
+       Enable users to log their workouts, water intake, sleep, and other health habits.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person receiving emergency advice on a mobile device" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/UJL8ng82pSb1ElA0JvQSQbnf9GoarO7czfuQVHbOsjSnziuTA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Emergency Advice
+      </h3>
+      <p>
+       Provide first-aid tips for common injuries, and make sure users are aware that it’s not a replacement for professional medical advice.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person receiving reminders and alerts on a mobile device" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/b68Ut2v6yrILK1UCVWztFSDf1ezKmszGT85yNfckOgjWnFdnA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Reminders and Alerts
+      </h3>
+      <p>
+       Notify users to take breaks, drink water, or exercise based on their preferences.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Check Now
+      </button>
+     </div>
+    </div>
+   </section>
+   <section class="bg-gradient-to-r from-green-400 to-blue-400 p-6 rounded-lg shadow-md mb-8">
+    <h2 class="text-xl font-bold mb-4 text-white">
+     Popular Topics
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person doing a fitness workout in a gym" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/l8BFHBtRKGYRO1LHeUq21dsxzaFipvwfqCzWEm5AtdDjyiuTA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Fitness Workouts
+      </h3>
+      <p>
+       Exercise routines for different goals like weight loss, muscle building, and flexibility.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Read More
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Various home remedy ingredients like ginger, honey, and lemon" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/oM2XecWJwb2sbiC5TwegGFffkQfrvezjLCyluRWlcqEGpso7E.jpg"/>
+      <h3 class="font-bold mb-2">
+       Home Remedies
+      </h3>
+      <p>
+       Safe, natural remedies for everyday issues like headaches, digestive problems, and skin care.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Read More
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A healthy meal with vegetables, grains, and protein" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/bX9AXPT1hJ5UHBnb5zFyXY8Meld45WJu2e4SVP84rCHhyiuTA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Healthy Recipes
+      </h3>
+      <p>
+       Step-by-step healthy recipes that users can follow.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Read More
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person stretching to relieve back pain" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/T7f76q4iqiRvaadsIqQeHm2SaFKvRbbMekb5RES9gBfkKL6OB.jpg"/>
+      <h3 class="font-bold mb-2">
+       Common Body Aches and Solutions
+      </h3>
+      <p>
+       Solutions for back pain, knee pain, neck stiffness, etc., with stretching and strengthening exercises.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Read More
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="Various fruits and vegetables rich in vitamins and minerals" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/A3YmhhHfbIwPf0MOmnhZf1Ag0UbvekPpHnmbXxs4SOOYKL6OB.jpg"/>
+      <h3 class="font-bold mb-2">
+       Nutrition and Supplements
+      </h3>
+      <p>
+       General info about vitamins, minerals, protein needs, and what foods are best for them.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Read More
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person meditating in a peaceful environment" class="rounded-lg mb-2 w-full" src="https://storage.googleapis.com/a1aa/image/xgUCcvf6lJUvO6YKjL4YBNVaV99k61xGTQ0llrmcoIcUZR3JA.jpg"/>
+      <h3 class="font-bold mb-2">
+       Mental Health and Mindfulness
+      </h3>
+      <p>
+       Content on mental well-being, mindfulness techniques, and ways to manage stress.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Read More
+      </button>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-md">
+      <img alt="A person holding a checklist for a healthy lifestyle challenge" class="rounded-lg mb-2 w-full" height="200" src="https://storage.googleapis.com/a1aa/image/y3TchksNA2biDV2udPtigIN1gmOIYaTI68NW9Btbcdsl3o7E.jpg" width="300"/>
+      <h3 class="font-bold mb-2">
+       Healthy Lifestyle Challenges
+      </h3>
+      <p>
+       Encourage users to take on weekly or monthly challenges like no sugar for a week or drink 8 glasses of water daily.
+      </p>
+      <button class="bg-green-500 text-white px-4 py-2 rounded mt-2 hover:bg-green-600">
+       Read More
+      </button>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gradient-to-r from-blue-500 to-green-500 text-white p-8 mt-8">
+   <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div>
+     <h3 class="text-lg font-bold mb-2">
+      About Us
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:underline" href="#">
+        About Us
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Contact Us
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Privacy Policy
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Terms of Service
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Disclaimer
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-lg font-bold mb-2">
+      Popular Sections
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:underline" href="#">
+        Symptom Checker
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Exercise Plans
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Diet &amp; Nutrition
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Mental Wellness
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-lg font-bold mb-2">
+      Follow Us
+     </h3>
+     <div class="flex space-x-4">
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div>
+     <h3 class="text-lg font-bold mb-2">
+      Support
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:underline" href="#">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Help Center
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Feedback
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-lg font-bold mb-2">
+      User Resources
+     </h3>
+     <ul>
+      <li>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </footer>
+  <script>
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
+
+ </body>
+</html>
